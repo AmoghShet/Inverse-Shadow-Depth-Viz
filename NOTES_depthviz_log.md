@@ -364,3 +364,7 @@ Peak RSS per worker 260-600 MB. MediaPipe mask 7.5 ms (CPU).
   docs/bench/m0_depth_win32_gtx1650ti.json, this log. D:\AudioViz and its audioviz repo are untouched.
   Commit ddbc0b8, author Amogh Shet <amoghshet45@gmail.com> (as in the user's latest audioviz commits; set in the
   new repo's local config only, there is no global git identity here).
+
+### 2026-10-15 00:37 user: "make repo public"
+- AmoghShet/Inverse-Shadow-Depth-Viz is now PUBLIC. Pre-check: no tokens or work email in the files; the only email is
+  the commit author gmail. This publishes the bundled audioviz/ package source too (its own repo stays private).
