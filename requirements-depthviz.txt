@@ -1,0 +1,10 @@
+# Depth Fog in ASCII (depthviz): extras on top of requirements.txt, installed into the same .venv.
+#   python -m uv pip install --python .venv/Scripts/python.exe -r requirements-depthviz.txt     (Windows)
+#   .venv/bin/python -m pip install -r requirements-depthviz.txt                                  (macOS)
+# onnxruntime-directml and onnxruntime share the import name `onnxruntime`: never install both.
+-r requirements.txt
+onnxruntime-directml==1.24.4; sys_platform == "win32"
+onnxruntime==1.31.0; sys_platform == "darwin"
+# person mask (optional; without it the mask comes from the depth itself)
+mediapipe==1.1.0; sys_platform == "win32"
+# depth models are NOT pip packages: python -m depthviz fetch-models  (downloads + sha256-verifies into models/depth/)

@@ -1,0 +1,21 @@
+{
+  "meta": {
+    "name": "ink_cold_portrait",
+    "schema": 1,
+    "aspect": "9:16",
+    "description": "ink_cold tuned for tall 9:16 frames: plumes start lower and rise through the frame, slightly narrower jets, one fewer emitter at most. Values not listed come from ink_cold."
+  },
+  "sim": {
+    "upstream_shift": 0.28,
+    "jet_spread_deg": 45,
+    "life": [10.0, -1.0, 1.5],
+    "drift": [0.035, -0.008, 0.01]
+  },
+  "random": {
+    "emitters": [2, 4],
+    "safe_area": [0.18, 0.82]
+  },
+  "grid": {
+    "pair_weights": {"default": 0.8, "furry": 0.05, "readable": 0.15}
+  }
+}

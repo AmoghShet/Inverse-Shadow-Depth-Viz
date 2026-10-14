@@ -1,0 +1,314 @@
+{
+  "meta": {
+    "name": "fog_white",
+    "schema": 2,
+    "aspect": "16:9",
+    "description": "Depth fog: the camera's depth map as one look, like the reference photographs: near things dark gray, the room dissolving into white haze, soft blurred edges, heavy monochrome film grain, gentle halation. The song moves fog density, exposure, kick flashes and grain within that look. Values written [value, jitter_lo, jitter_hi] get value + uniform(lo, hi) from the seed."
+  },
+  "depth": {
+    "tau_s": 0.22,
+    "edge_reset": 0.2,
+    "mask_margin": 0.08,
+    "sigma_s": 2.0,
+    "sigma_r": 0.08,
+    "sharpen": 0.0,
+    "mask": false
+  },
+  "fog": {
+    "k": [
+      2.2,
+      -0.4,
+      0.5
+    ],
+    "curve": [
+      1.15,
+      -0.1,
+      0.15
+    ],
+    "high_key": {
+      "near": [
+        0.1,
+        -0.03,
+        0.03
+      ],
+      "far": [
+        0.95,
+        -0.03,
+        0.03
+      ]
+    },
+    "inverted": {
+      "near": [
+        0.74,
+        -0.08,
+        0.1
+      ],
+      "far": [
+        0.02,
+        -0.02,
+        0.02
+      ]
+    },
+    "gamma": [
+      1.0,
+      -0.1,
+      0.1
+    ],
+    "exposure": [
+      1.0,
+      -0.15,
+      0.15
+    ],
+    "swirl": [
+      0.1,
+      -0.04,
+      0.05
+    ],
+    "swirl_scale": 1.6,
+    "swirl_speed": 0.05,
+    "parallax": [
+      0.008,
+      -0.004,
+      0.004
+    ],
+    "parallax_period_s": [
+      30.0,
+      -10.0,
+      10.0
+    ],
+    "pivot": 0.5,
+    "knee": 0.7
+  },
+  "light": {
+    "ambient": [
+      0.9,
+      -0.05,
+      0.06
+    ],
+    "gain": [
+      0.25,
+      -0.1,
+      0.1
+    ],
+    "width": [
+      0.18,
+      -0.08,
+      0.12
+    ],
+    "blob": [
+      0.25,
+      -0.1,
+      0.12
+    ],
+    "blob_radius": [
+      0.3,
+      -0.12,
+      0.15
+    ]
+  },
+  "halo": {
+    "threshold": 0.8,
+    "gain": [
+      0.3,
+      -0.1,
+      0.15
+    ],
+    "spread": 1.0
+  },
+  "film": {
+    "grain": [
+      0.16,
+      -0.02,
+      0.03
+    ],
+    "grain_size": [
+      1.6,
+      -0.3,
+      0.4
+    ],
+    "clump": [
+      0.5,
+      -0.1,
+      0.1
+    ],
+    "dark_grain": 0.8,
+    "blur": [
+      5.0,
+      -1.0,
+      2.0
+    ],
+    "black": 0.07,
+    "white": 0.91
+  },
+  "palette": {
+    "families": {
+      "neutral": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.11,
+          0.11,
+          0.11,
+          0.3
+        ],
+        [
+          0.55,
+          0.55,
+          0.55,
+          0.7
+        ],
+        [
+          0.97,
+          0.97,
+          0.96,
+          1.0
+        ]
+      ]
+    },
+    "family_weights": {
+      "neutral": 1.0
+    },
+    "strength": 0.0
+  },
+  "grain": {
+    "flicker": [
+      0.025,
+      -0.01,
+      0.01
+    ],
+    "vignette": [
+      0.3,
+      -0.08,
+      0.08
+    ],
+    "dust": [
+      0.0002,
+      -0.0001,
+      0.0002
+    ],
+    "frame_rate": 12
+  },
+  "audio_map": {
+    "lookahead_s": 0.03,
+    "loudness": {
+      "attack": 0.5,
+      "release": 2.0,
+      "k": [
+        0.85,
+        1.25
+      ],
+      "exposure": [
+        0.85,
+        1.35
+      ]
+    },
+    "sub": {
+      "attack": 0.06,
+      "release": 0.4,
+      "k_add": [
+        0.0,
+        0.3
+      ],
+      "pivot": [
+        0.5,
+        0.6
+      ]
+    },
+    "bass": {
+      "attack": 0.03,
+      "release": 0.25,
+      "depth_gamma": [
+        1.0,
+        0.85
+      ]
+    },
+    "kick": {
+      "min_rank": 0.35,
+      "flash": [
+        0.3,
+        0.9
+      ],
+      "flash_release": 0.15,
+      "grain_burst": 0.04
+    },
+    "hats": {
+      "dust_burst": 0.0004
+    },
+    "onset": {
+      "attack": 0.0,
+      "release": 0.15,
+      "sigma_r": [
+        0.08,
+        0.03
+      ],
+      "sharpen": [
+        0.0,
+        0.5
+      ]
+    },
+    "centroid": {
+      "attack": 0.3,
+      "release": 0.6,
+      "spread": [
+        0.96,
+        1.0
+      ]
+    },
+    "harmonic": {
+      "attack": 0.2,
+      "release": 1.2,
+      "halo_gain": [
+        0.15,
+        0.5
+      ],
+      "halo_spread": [
+        0.8,
+        1.6
+      ]
+    },
+    "flux": {
+      "attack": 0.02,
+      "release": 0.2,
+      "grain_add": [
+        0.0,
+        0.02
+      ]
+    },
+    "high": {
+      "attack": 0.015,
+      "release": 0.12,
+      "grain_add": [
+        0.0,
+        0.03
+      ]
+    },
+    "beat": {
+      "wobble": [
+        0.0,
+        0.006
+      ],
+      "exposure_breath": 0.05
+    },
+    "section": {
+      "flip_p": 0.0,
+      "crossfade_beats": 2,
+      "flip_beats": 2,
+      "note": "one look: sections change nothing visible; V flips polarity by hand"
+    }
+  },
+  "random": {
+    "p_high_key": 1.0,
+    "safe_area": [
+      0.25,
+      0.75
+    ],
+    "light_dir_deg": [
+      0.0,
+      360.0
+    ]
+  }
+}

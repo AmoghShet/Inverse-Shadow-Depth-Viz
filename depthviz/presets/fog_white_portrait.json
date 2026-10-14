@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "name": "fog_white_portrait",
+    "schema": 2,
+    "aspect": "9:16",
+    "description": "fog_white for tall 9:16 frames: the centre 42% of the camera width (a standing figure), light kept nearer the centre line. Values not listed come from fog_white."
+  },
+  "light": {
+    "width": [
+      0.14,
+      -0.06,
+      0.08
+    ],
+    "blob_radius": [
+      0.22,
+      -0.08,
+      0.1
+    ]
+  },
+  "random": {
+    "safe_area": [
+      0.3,
+      0.7
+    ]
+  }
+}

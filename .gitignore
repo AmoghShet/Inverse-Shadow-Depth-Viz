@@ -1,0 +1,21 @@
+# environments
+.venv/
+__pycache__/
+*.pyc
+
+# generated: song feature cache, renders, screenshots, recordings, exports, depth tapes, verification frames
+.cache/
+out/
+
+# depth models and MediaPipe models (downloaded: python -m depthviz fetch-models)
+models/
+
+# audio is never committed (songs are read from where they live)
+*.mp3
+*.wav
+*.flac
+*.m4a
+*.ogg
+
+# presets saved with Ctrl+S
+depthviz/presets/user_*.json
