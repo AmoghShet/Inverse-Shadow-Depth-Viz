@@ -348,3 +348,19 @@ Peak RSS per worker 260-600 MB. MediaPipe mask 7.5 ms (CPU).
 ### 2026-10-15 00:13 user: "get rid of the hud"
 - HUD hidden by default (new --hud flag shows it at start; H still toggles; --no-hud kept as a hidden no-op for old
   commands). Recordings and screenshots therefore have no HUD unless it is switched on.
+
+### 2026-10-15 00:31 pushed to GitHub: AmoghShet/Inverse-Shadow-Depth-Viz (private)
+- User: "looks good. Push it to a new github repo called Inverse Shadow Depth Viz" (spaces are not allowed in
+  repo names -> Inverse-Shadow-Depth-Viz; private like the audioviz repo).
+- Before pushing, the full suite (tests/depthviz_run_all.py --no-camera) + reruns: check PASS, M1 PASS, M2 8/8
+  (after the inverted-look fix: V-key inverted fog 0.4x density, inverted near tone 0.74), M3 look 5/5 (depth/tone
+  Spearman 0.96-0.98 with the light off, edges 30 px soft, dark-tape tick change 0.0095), M4 PASS (song 3:13: 0
+  underflows, 0 dropped, 0 flips; keys; fullscreen; flip check now = one look: 0 flips, 100% high-key), M5 PASS.
+  The camera-live part of M4 last ran before the single-look change; the user's own camera sessions since ran clean
+  (00:13: 2 min, 0 dropped steps, depth 18.6 fps).
+- The repo is a SNAPSHOT exported to D:\Inverse-Shadow-Depth-Viz (its own git, origin = the new repo): depthviz/,
+  audioviz/ (needed: depthviz imports it; includes the user's uncommitted --record work, live_recorder.py),
+  tests/depthviz_*.py, requirements*.txt, README.md (standalone setup), docs/PLAN_depthviz.md,
+  docs/bench/m0_depth_win32_gtx1650ti.json, this log. D:\AudioViz and its audioviz repo are untouched.
+  Commit ddbc0b8, author Amogh Shet <amoghshet45@gmail.com> (as in the user's latest audioviz commits; set in the
+  new repo's local config only, there is no global git identity here).
